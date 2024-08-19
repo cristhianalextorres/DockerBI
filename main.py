@@ -10,7 +10,7 @@ from visualizador_web import Visualuzador
 start_time = time.time()
 
 # Inicialización de objetos
-conexion = ConexionSQL('servidor', 'nombreBD', 'Usuario', 'Pass')
+#conexion = ConexionSQL('servidor', 'nombreBD', 'Usuario', 'Pass')
 gestor_archivos = GestorArchivos()
 
 # Cargar datos
