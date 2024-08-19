@@ -23,8 +23,6 @@ df_resultado = pd.DataFrame()
 
 print(categoria, categorias_unicas)
 
-
-
 # Procesamiento de datos por categoría
 for cat in categorias_unicas:
     df_cat = df[df[categoria] == cat].drop(columns=[categoria])
@@ -52,8 +50,11 @@ df_resultado['Aporte'] = pd.to_numeric(df_resultado['Aporte'])
 df_resultado['AportePred'] = pd.to_numeric(df_resultado['AportePred'])
 columnas = ['Aporte', 'AportePred']
 
-parametrosVilualizar = Visualuzador(df= df_resultado, filtro= filtro, indice= 'fecha', columnas= columnas)
-parametrosVilualizar.graficoLineas()
+parametrosVilualizar = Visualuzador(
+                                    df= df_resultado,
+                                    filtro= filtro,
+                                    indice= 'fecha',
+                                    columnas= columnas).graficoLineas()
 
 elapsed_time = time.time() - start_time
 print(f'Tiempo de ejecución: {elapsed_time} segundos')
