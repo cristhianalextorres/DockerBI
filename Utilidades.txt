@@ -1,0 +1,3 @@
+https://docs.streamlit.io/deploy/tutorials/docker
+
+python -m streamlit run streamlit_app.py
