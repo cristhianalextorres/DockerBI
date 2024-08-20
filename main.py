@@ -45,10 +45,12 @@ gestor_archivos.guardar_datos_csv(df_resultado, 'SalidaDatosAportesPred.csv')
 df_resultado = df_resultado.reset_index()
 df_resultado['fecha'] = pd.to_datetime(df_resultado['fecha'])
 filtro = df_resultado['Empresa'].unique()
-df_resultado.set_index(df_resultado['fecha'].index, inplace=True)
+df_resultado.set_index(df_resultado['fecha'], inplace=True)
 df_resultado['Aporte'] = pd.to_numeric(df_resultado['Aporte'])
 df_resultado['AportePred'] = pd.to_numeric(df_resultado['AportePred'])
 columnas = ['Aporte', 'AportePred']
+
+print(df_resultado.head())
 
 parametrosVilualizar = Visualuzador(
                                     df= df_resultado,
