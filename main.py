@@ -21,7 +21,6 @@ categorias_unicas = df[categoria].unique()
 
 df_resultado = pd.DataFrame()
 
-print(categoria, categorias_unicas)
 
 # Procesamiento de datos por categoría
 for cat in categorias_unicas:
@@ -50,7 +49,6 @@ df_resultado['Aporte'] = pd.to_numeric(df_resultado['Aporte'])
 df_resultado['AportePred'] = pd.to_numeric(df_resultado['AportePred'])
 columnas = ['Aporte', 'AportePred']
 
-print(df_resultado.head())
 
 parametrosVilualizar = Visualuzador(
                                     df= df_resultado,
