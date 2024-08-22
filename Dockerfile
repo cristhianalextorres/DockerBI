@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# RUN git clone https://github.com/cristhianalextorres/DockerBI.git .
-COPY . .
+RUN git clone https://github.com/cristhianalextorres/DockerBI.git .
+# COPY . .
 
 RUN pip install --upgrade pip
 
